@@ -1,0 +1,12 @@
+# Use the official Docker image that includes Docker and Docker Compose
+FROM docker:latest
+
+# Install Docker Compose
+RUN apk add --no-cache docker-compose
+
+# Copy the docker-compose.yml file and .env file to the working directory
+COPY docker-compose.yml .
+COPY .env .
+
+# Entry point that runs docker-compose
+ENTRYPOINT ["docker-compose", "up"]
