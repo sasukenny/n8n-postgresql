@@ -2,5 +2,4 @@ services:
   - type: web
     name: n8n-postgresql
     env: docker
-    dockerCommand: docker-compose -f docker-compose.yml up
-    buildCommand: docker-compose -f docker-compose.yml build
+    dockerCommand: docker-compose up
